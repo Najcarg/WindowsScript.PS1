@@ -3,6 +3,7 @@ If script dont work:
 “Get-ExecutionPolicy -List” and hit Enter.
 “Set-ExecutionPolicy Unrestricted” and hit Enter again.
 “Set-ExecutionPolicy Unrestricted -Force” and hit Enter.
+Ver.1.001 - 21/09/2023 first upload. 
 #>
 Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.Application]::EnableVisualStyles()
@@ -377,11 +378,5 @@ function Heaven { Start-Process https://benchmark.unigine.com/heaven}
 
 function FanControl { Start-Process https://getfancontrol.com/}
 
-
-
-
-#Write your logic code here
-
-#endregion
 
 [void]$Menu.ShowDialog()
