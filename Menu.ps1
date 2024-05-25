@@ -5,6 +5,19 @@ If script dont work:
 “Set-ExecutionPolicy Unrestricted -Force” and hit Enter.
 Ver.1.001 - 21/09/2023 first upload. 
 #>
+# Check the current execution policy
+$currentPolicy = Get-ExecutionPolicy
+
+# Set the execution policy to Unrestricted if it's not already
+if ($currentPolicy -ne 'Unrestricted') {
+    Set-ExecutionPolicy Unrestricted -Scope Process -Force
+}
+
+# Your script's logic goes here
+
+# Optionally, revert back to the original policy if needed
+Set-ExecutionPolicy $currentPolicy -Scope Process -Force
+
 Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
